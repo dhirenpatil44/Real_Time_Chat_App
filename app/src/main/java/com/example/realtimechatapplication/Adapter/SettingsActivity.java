@@ -101,8 +101,6 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivityForResult(intent, 33);
             }
         });
-
-
     }
 
     @Override
@@ -113,7 +111,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             binding.profileImage.setImageURI(sFile);
 
-            final StorageReference reference = storage.getReference().child("ProfilePic")
+            StorageReference reference = storage.getReference().child("profilePic")
                     .child(FirebaseAuth.getInstance().getUid());
 
 
